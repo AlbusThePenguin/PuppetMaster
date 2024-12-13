@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+repositories {
+    mavenCentral()  // Default repository
+    maven {
+        name = "spigotmc-repo"
+        url = "https://hub.spigotmc.org/nexus/content/repositories/snapshots/"
+    }
+}
+
+dependencies {
+    // Add the Spigot API as a compileOnly dependency
+    compileOnly 'org.spigotmc:spigot-api:1.21-R0.1-SNAPSHOT'
+
+    // Include the API module as a dependency
+    implementation project(':api')
+}
+
+jar {
+    // Ensure the compiled API classes are included in the core jar
+    from(project(':api').sourceSets.main.output)
+}

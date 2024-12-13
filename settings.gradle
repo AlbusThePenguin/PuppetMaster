@@ -1,1 +1,3 @@
 rootProject.name = 'PuppetMaster'
+
+include 'core', 'api', 'nms-wrapper', 'nms-1_21_R1', 'nms-1_21_R2', 'nms-1_21_R3'
