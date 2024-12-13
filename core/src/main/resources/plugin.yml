@@ -1,0 +1,4 @@
+name: PuppetMaster
+version: '1.0.0'
+main: me.albusthepenguin.puppetMaster.PuppetMaster
+api-version: '1.21'
